@@ -1,6 +1,6 @@
-package Practical_Assignment.Assignment_1.MainWork;
+package Practical_Assignment.Packages.MainWork;
 
-import Practical_Assignment.Assignment_1.Area.*;
+import Practical_Assignment.Packages.Area.*;
 import java.util.Scanner;
 
 /**

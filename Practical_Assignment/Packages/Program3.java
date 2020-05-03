@@ -1,13 +1,17 @@
-package Practical_Assignment.Assignment_1;
+package Practical_Assignment.Packages;
+
 import java.util.*;
 
+/**
+ * Program3
+ */
 
-public class Program4 {
+ public class Program3 {
     public static void main(String[] args) {
-        Vector ob = new Vector <String>();
         Scanner scan = new Scanner(System.in);
-
+        LinkedList<String> ob = new LinkedList<String>();
         int ch = 1;
+
         while(ch == 1)
         {
             System.out.println("1. Add element \n2. Add at Index \n3. Delete at Index \n4. Print");
@@ -17,12 +21,12 @@ public class Program4 {
             switch(cs)
             {
                 case 1:
-                    System.out.print("Enter Mammal name : ");
+                    System.out.print("Enter Vehicle name : ");
                     String name = scan.next();
                     ob.add(name);
                     break;
                 case 2:
-                    System.out.print("Enter Mammal Name :  ");
+                    System.out.print("Enter Vehicle Name :  ");
                     String s = scan.next();
                     System.out.print("Enter Index number : ");
                     int in = scan.nextInt();
@@ -31,10 +35,11 @@ public class Program4 {
                 case 3:
                     System.out.print("Enter Index number : ");
                     int ind = scan.nextInt();
-                    ob.remove(ind);
+                    String del = ob.remove(ind);
+                    System.out.println("Deleted element is : "+del);
                     break;
                 case 4:
-                    System.out.println("Elements in Vector List..");
+                    System.out.println("Elements in Linked List..");
                     System.out.print(ob);
                     break;
                 default:

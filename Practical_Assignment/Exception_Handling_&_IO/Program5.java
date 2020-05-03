@@ -1,5 +1,3 @@
-package Practical_Assignment.Assignment_2;
-
 import java.io.*;
 
 class Student implements Serializable

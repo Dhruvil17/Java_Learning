@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Que1",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Multi_Threading.Que1",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Program1",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Multi_Threading.Program1",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadingJoin",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.ThreadingJoin",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadingStop",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.ThreadingStop",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadingStart",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.ThreadingStart",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Program5",
             "request": "launch",
             "mainClass": "Practical_Assignment.Assignment_2.Program5",

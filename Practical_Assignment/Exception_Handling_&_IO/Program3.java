@@ -1,5 +1,3 @@
-package Practical_Assignment.Assignment_2;
-
 import java.util.*;
 
 class InvalidHrExcep extends Exception

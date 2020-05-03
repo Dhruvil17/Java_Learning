@@ -1,4 +1,5 @@
-package Practical_Assignment.Assignment_1;
+package Practical_Assignment.Packages;
+
 import java.util.Scanner;
 
 /**
