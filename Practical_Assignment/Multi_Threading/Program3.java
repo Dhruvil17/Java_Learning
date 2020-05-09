@@ -48,14 +48,12 @@ public class Program3 {
 
         Thread Th[] = new Thread[n];
 
-        synchronized(Program3.class)
+        
+        for(int i=0;i<n;i++)
         {
-            for(int i=0;i<n;i++)
-            {
-                matrixSum mt = new matrixSum(n, arrMat, i);
-                Th[i] = new Thread(mt);
-                Th[i].start();
-            }
+            matrixSum mt = new matrixSum(n, arrMat, i);
+            Th[i] = new Thread(mt);
+            Th[i].start();
         }
         scan.close();
     }    
