@@ -38,7 +38,6 @@ class ParallelTask1 implements Runnable
             System.out.println(Thread.currentThread().getName()+" is executing Multiplication of two number..");
             System.out.println("Multiplication : "+(n1*n2));
         } catch (Exception e) {
-            //TODO: handle exception
             e.printStackTrace();
         }
     }

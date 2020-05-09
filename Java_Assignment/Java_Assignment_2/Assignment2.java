@@ -33,10 +33,10 @@ class TollBooth
 
    int[] get_count_nonpay_vehicle(String type)
    {
-        if(type == "car" || type == "Car")
-            non_pay_car++;
-        else
+        if(type.equals("Truck") || type.equals("truck"))
             non_pay_truck++;
+        else
+            non_pay_car++;
         
         non_pay_vehicle[0] = non_pay_car;
         non_pay_vehicle[1] = non_pay_truck;
@@ -97,12 +97,12 @@ public class Assignment2 {
                 case 2:
                     System.out.print("Enter vehicle number to get Info : ");
                     int num = scan.nextInt();
-                    int j=0;
-                    for(j=0;j<TollBooth.no_of_vehicle;j=j+1){
-                        obj[j].vehicle_no = num;
-                        break;
+                    for(int z=0;z<TollBooth.no_of_vehicle;z++) {
+                        if(obj[z].vehicle_no == num){
+                            obj[z].Vehicle_info();
+                            break;
+                        }
                     }
-                    obj[j].Vehicle_info();
                     break;
                 case 3:
                     TollBooth.Display();
