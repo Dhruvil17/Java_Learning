@@ -43,6 +43,8 @@ public class Program1 {
   
         t1.join(); 
         t2.join(); 
+
+        scan.close();
     } 
 
     public static class PC {  
