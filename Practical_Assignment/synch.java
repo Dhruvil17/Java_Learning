@@ -1,43 +1,46 @@
 package Practical_Assignment;
 
-class printer{
-    synchronized public void print(String message){
-		System.out.print("[");
-		System.out.print(message);
-		System.out.println("]");
-	}
+class table {
+        public static void printTable(int n) throws InterruptedException {
+        synchronized(table.class){
+            for (int i = 1; i <= 10; i++) {
+                System.out.print(n + " x " + i + " = ");
+                System.out.println(i * n);
+            }
+            System.out.println();
+
+            Thread.sleep(1000);
+        }
+    }
 }
 
-class userthread extends Thread{
-	
-	String msg;
-	printer p;
-	userthread(String m1, printer p1){
-		this.msg = m1;
-		this.p=p1;
-	}
-	public void run(){
-		p.print(msg);
-	}
+class tableThread implements Runnable {
+    int n;
+    tableThread(int n)
+    {
+        this.n = n;
+    }
+
+    public void run() {
+        try {
+            table.printTable(n);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
 
+public class synch
+{
+    public static void main(String[] args) {
+        tableThread ob1 = new tableThread(5);
+        tableThread ob2 = new tableThread(10);
 
-public class synch {
+        Thread t1 = new Thread(ob1);
+        Thread t2 = new Thread(ob2);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		printer p1 = new printer();
-		
-		userthread t1 = new userthread("Good Morning",p1);
-		userthread t2 = new userthread("MultiTasking",p1);
-		userthread t3 = new userthread("CoviD19",p1);
-		userthread t4 = new userthread("Synchronization",p1);
-		
-		t1.start();
-		t2.start();
-		t3.start();
-		t4.start();
-
-	}
-
+        t1.start();
+        t2.start();
+    }
 }
