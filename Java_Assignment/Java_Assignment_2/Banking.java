@@ -26,12 +26,13 @@ class BankBranch
         networth += account_bal;
     }
 
-    void loan_condition(int amount)
+    void loan_approval (int amount)
     {
         if(amount <= 2*account_bal && amount<networth){
             System.out.println("Loan Granted..");
+            account_bal += amount;
             loan_sanctioned = loan = amount;
-            networth -= amount;
+            networth = networth - amount;
         }
         else
             System.out.println("Not enough balance for loan..");
@@ -40,15 +41,17 @@ class BankBranch
     int loan_repay(int amount)
     {
         int count = 0;
-        if(amount>loan_sanctioned)
+        if(amount > loan_sanctioned)
         {
-            account_bal += amount - loan_sanctioned;
-            networth += amount - loan_sanctioned;
-            loan_sanctioned = loan = 0;
+            account_bal += (amount - loan_sanctioned);
+            networth += (amount - loan_sanctioned);
+            loan -= loan_sanctioned;
+            loan_sanctioned = 0;
             count++;
         }
         else
         {
+            account_bal -= amount;
             loan_sanctioned = loan = loan_sanctioned - amount;
             networth += amount;
             count++;
@@ -62,12 +65,11 @@ class BankBranch
         System.out.println("Customer Name   : "+c_name);
         System.out.println("Account balance : "+account_bal);
         System.out.println("Loan Sanctioned : "+loan_sanctioned);
-        System.out.println("No. of Instalments : ");
     }
 
-    void inspection()
+    public static void inspection()
     {
-        System.out.println("Network of Bank : "+networth);
+        System.out.println("Networth of Bank : "+networth);
         System.out.println("Total no. of Accounts : "+no_of_account);
         System.out.println("Total loan sanctioned : "+loan);
     }
@@ -78,23 +80,70 @@ public class Banking{
         Scanner scan = new Scanner(System.in);
         String name;
         int no,bal,l;
-        int ch = 1;
+        int ch = 1,numCount = 0;
+
+        BankBranch bk[] = new BankBranch[10];
 
         while(ch == 1)
         {
-            System.out.print("1 . New Account\n2 . Account Info\n3 . Loan Sanctioned\n4 . Inspection");
+            System.out.println("1 . New Account\n2 . Account Info\n3 . Loan Sanctioned\n4 . Loan repay\n5 . Inspection\n");
+            System.out.print("Enter your choise : ");
             int cs = scan.nextInt();
+            System.out.println("");
             switch(cs)
             {
                 case 1:
+                    if(numCount>10)
+                        System.out.println("No more than 10 entries ..");
+
                     System.out.print("Enter account no. :");
                     no = scan.nextInt();
                     System.out.print("Enter Customer Name : ");
                     name = scan.next();
                     System.out.print("Enter balance : ");
                     bal = scan.nextInt();
-
+                    bk[numCount] = new BankBranch(no, name, bal,0);
+                    bk[numCount].net_worth_and_account();
+                    numCount++;
+                    
+                    break;
+                case 2:
+                    System.out.print("Enter your Account no. : ");
+                    int ac_no = scan.nextInt();
+                    for(int i=0;i<10;i++)
+                    {
+                        if(bk[i].c_no == ac_no)
+                        {
+                            bk[i].account_info();
+                            break;
+                        }
+                    }
+                    break;
+                case 3:
+                    System.out.print("For which Account no. do you want loan : ");
+                    int cn = scan.nextInt();
+                    System.out.print("Enter ammount of loan : ");
+                    l = scan.nextInt();
+                    bk[cn-1].loan_approval(l);
+                    break;
+                case 4:
+                    System.out.print("For which Account no. do you want loan repay : ");
+                    int cr = scan.nextInt();
+                    System.out.print("Enter the ammount of loan repay : ");
+                    int l_repay = scan.nextInt();
+                    bk[cr-1].loan_repay(l_repay);
+                    break;
+                case 5:
+                    BankBranch.inspection();
+                    break;
+                default:
+                    System.out.println("Wrong choise ...");
+                    break;
             }
+            System.out.println("");
+            System.out.print("Do u want to continue [1 for Yes / 0 for No] :");
+            ch = scan.nextInt();
         }
+        scan.close();
     }
 }

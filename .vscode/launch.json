@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Banking",
+            "request": "launch",
+            "mainClass": "Java_Assignment.Java_Assignment_2.Banking",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Program3",
             "request": "launch",
             "mainClass": "Practical_Assignment.Multi_Threading.Program3",
