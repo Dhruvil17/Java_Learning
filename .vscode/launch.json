@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Program2",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Multi_Threading.Program2",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - synch",
             "request": "launch",
             "mainClass": "Practical_Assignment.synch",
