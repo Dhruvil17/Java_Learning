@@ -1,4 +1,4 @@
-package Practical_Assignment;
+package Practical_Assignment.Example;
 
 class ParallelTask implements Runnable
 {

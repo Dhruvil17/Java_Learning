@@ -1,4 +1,4 @@
-package Practical_Assignment;
+package Practical_Assignment.Example;
 
 class table {
         public static void printTable(int n) throws InterruptedException {
