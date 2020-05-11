@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Program2",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.GUI_Assignment.Program2",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Program1",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.GUI_Assignment.Program1",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Counter",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.GUI.Counter",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AWT_Counter",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.GUI.AWT_Counter",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GUI_Swing",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.GUI_Swing",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Java_Project",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.Applet_Example.Java_Project",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyApplet",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.MyApplet",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - synch",
+            "request": "launch",
+            "mainClass": "Practical_Assignment.Example.synch",
+            "projectName": "Java_Learning_4bef98f8"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Banking",
             "request": "launch",
             "mainClass": "Java_Assignment.Java_Assignment_2.Banking",
