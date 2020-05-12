@@ -11,11 +11,9 @@ public class Program2 extends JFrame implements ActionListener
     private JMenuBar mb;
     private JMenu file,edit,color;
     private static JMenuItem qt,er,c1,c2,c3,c4,c5;
-    // private JFrame f;
 
     public Program2()
     {
-        // f = new JFrame();
         this.getContentPane().setBackground(Color.WHITE);
         setTitle("Program_2");
         setSize(500, 500);
